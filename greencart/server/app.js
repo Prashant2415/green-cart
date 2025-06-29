@@ -24,6 +24,13 @@ app.use("/api/product", productRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/billing", billingRouter);
 
+app.get("/",(req,res)=>{
+    res.send({
+        activeStatus: true,
+        error: false
+    })
+})
+
 mongoose.connect(process.env.MONGO_URI,{useNewUrlParser: true, useUnifiedTopology: true})
     .then(()=>{
         console.log("Mongoose connected");
