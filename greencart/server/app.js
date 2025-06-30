@@ -12,7 +12,7 @@ const billingRouter = require("./routes/billingRoute");
 
 app.use(cors(
     {
-        origin: "https://green-cart-flax.vercel.app/",
+        origin: "https://green-cart-flax.vercel.app",
         credentials: true
     }
 ))
