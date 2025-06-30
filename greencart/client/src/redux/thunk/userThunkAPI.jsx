@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // You can optionally move this base URL to an env file or config
-const API_URL = "http://localhost:3000/api/auth/signIn";
+const API_URL = `${import.meta.env.VITE_BACKEND_LINK}/api/auth/signIn`;
 
 export const userSignIn = createAsyncThunk(
   'user/signIn',
